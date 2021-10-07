@@ -2,7 +2,8 @@ import menu
 
 
 def init():
-    menu.add_menu()
+    menu.add_menus()
 
 
-init()
+if __name__ == '__main__':
+    init()
