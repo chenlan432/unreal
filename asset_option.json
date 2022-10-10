@@ -1,0 +1,74 @@
+{
+  "StaticMesh":
+  {
+    "Nanite":
+    {
+      "ImportData":
+      {
+        "auto_generate_collision": false,
+        "vertex_color_import_option": "unreal.VertexColorImportOption.REPLACE",
+        "build_reversed_index_buffer": true,
+        "generate_lightmap_u_vs": false,
+        "one_convex_hull_per_ucx": true,
+        "combine_meshes": true,
+        "distance_field_resolution_scale": 1,
+        "transform_vertex_to_absolute": true,
+        "normal_import_method": "unreal.FBXNormalImportMethod.FBXNIM_IMPORT_NORMALS",
+        "normal_generation_method": "unreal.FBXNormalGenerationMethod.MIKK_T_SPACE",
+        "compute_weighted_normals": true,
+        "convert_scene": true,
+        "force_front_x_axis": true,
+        "convert_scene_unit": true,
+        "build_nanite": true,
+        "import_mesh_lo_ds": false
+      }
+    },
+    "Regular":
+    {
+      "ImportData":
+      {
+        "auto_generate_collision": false,
+        "vertex_color_import_option": "unreal.VertexColorImportOption.REPLACE",
+        "build_reversed_index_buffer": true,
+        "generate_lightmap_u_vs": false,
+        "one_convex_hull_per_ucx": true,
+        "combine_meshes": true,
+        "distance_field_resolution_scale": 1,
+        "transform_vertex_to_absolute": true,
+        "normal_import_method": "unreal.FBXNormalImportMethod.FBXNIM_IMPORT_NORMALS",
+        "normal_generation_method": "unreal.FBXNormalGenerationMethod.MIKK_T_SPACE",
+        "compute_weighted_normals": true,
+        "convert_scene": true,
+        "force_front_x_axis": true,
+        "convert_scene_unit": true,
+        "build_nanite": false,
+        "import_mesh_lo_ds": true,
+        "remove_degenerates": true
+      }
+    }
+  },
+  "Texture2D":
+  {
+    "D":
+    {
+      "compression_settings": "unreal.TextureCompressionSettings.TC_DEFAULT",
+      "srgb": true
+    },
+    "E":
+    {
+      "compression_settings": "unreal.TextureCompressionSettings.TC_DEFAULT",
+      "srgb": true
+    },
+    "N":
+    {
+      "compression_settings": "unreal.TextureCompressionSettings.TC_NORMALMAP",
+      "srgb": false,
+      "flip_green_channel": true
+    },
+    "default":
+    {
+      "compression_settings": "unreal.TextureCompressionSettings.TC_BC7",
+      "srgb": false
+    }
+  }
+}

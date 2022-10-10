@@ -1,4 +1,5 @@
 import menu
+import check_asset
 
 
 def init():

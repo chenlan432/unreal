@@ -1,27 +1,28 @@
 import unreal
+import utils
 
 
 MENUS = {
     # 主菜单
     'LevelEditor.MainMenu': (
         {
-            'name': 'new_menu',
+            'name': utils.get_project_name(),
             'section': 'new_section',
-            'tip': 'this is new menu',
+            'tip': 'this is a tool menu for project {}'.format(utils.get_project_name()),
             'type': 'menu',
             'sub': (
+                # {
+                #     'name': 'Import DCC Cache',
+                #     'section': 'import',
+                #     'type': 'entry',
+                #     'func': 'print("aaa")'
+                # },
                 {
-                    'name': 'button1',
+                    'name': 'Check Assets',
                     'section': 'import',
                     'type': 'entry',
-                    'func': 'print("aaa")'
+                    'func': 'check_asset.check_assets()'
                 },
-                {
-                    'name': 'button2',
-                    'section': 'import',
-                    'type': 'entry',
-                    'func': 'print("bbb")'
-                }
             )
         },
     )
