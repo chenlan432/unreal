@@ -5,9 +5,17 @@ import utils
 REGULAR_MESH = ['Tree', 'Grass', 'Wat']
 
 
-def check_assets():
-    assets = utils.get_all_assets('/Game/{}/Art'.format(utils.get_project_name()))
-    # assets = utils.get_all_assets('/Game/CodeAxis/Art')
+def check_assets_all():
+    check_assets('/Game/CodeAxis/Art')
+    # check_assets('/Game/{}/Art'.format(utils.get_project_name()))
+
+
+def check_asset_current():
+    check_assets(unreal.EditorUtilityLibrary.get_current_content_browser_path())
+
+
+def check_assets(dir_path):
+    assets = utils.get_all_assets(dir_path)
     error_textures = []
     error_static_meshes = []
     settings = utils.load_json('asset_option')
@@ -72,7 +80,7 @@ def change_texture(error_textures, settings):
         else:
             change_texture_property(texture, props, settings['default'])
 
-        unreal.EditorAssetLibrary.save_loaded_asset(texture)
+        # unreal.EditorAssetLibrary.save_loaded_asset(texture)
 
 
 def check_static_meshes_import_data(import_data, error_static_mesh, setting):

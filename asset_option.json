@@ -65,6 +65,11 @@
       "srgb": false,
       "flip_green_channel": true
     },
+    "H":
+    {
+      "compression_settings": "unreal.TextureCompressionSettings.TC_GRAYSCALE",
+      "srgb": false
+    },
     "default":
     {
       "compression_settings": "unreal.TextureCompressionSettings.TC_BC7",

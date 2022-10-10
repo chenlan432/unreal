@@ -6,22 +6,29 @@ MENUS = {
     # 主菜单
     'LevelEditor.MainMenu': (
         {
-            'name': utils.get_project_name(),
+            'name': 'CROS Tools',
             'section': 'new_section',
             'tip': 'this is a tool menu for project {}'.format(utils.get_project_name()),
             'type': 'menu',
             'sub': (
-                # {
-                #     'name': 'Import DCC Cache',
-                #     'section': 'import',
-                #     'type': 'entry',
-                #     'func': 'print("aaa")'
-                # },
                 {
                     'name': 'Check Assets',
-                    'section': 'import',
-                    'type': 'entry',
-                    'func': 'check_asset.check_assets()'
+                    'section': 'check',
+                    'type': 'menu',
+                    'sub': (
+                        {
+                            'name': 'Check All',
+                            'section': 'check',
+                            'type': 'entry',
+                            'func': 'check_asset.check_assets_all()'
+                        },
+                        {
+                            'name': 'Check Current',
+                            'section': 'check',
+                            'type': 'entry',
+                            'func': 'check_asset.check_asset_current()'
+                        }
+                    )
                 },
             )
         },
