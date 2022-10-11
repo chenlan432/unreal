@@ -1,5 +1,6 @@
 import menu
 import check_asset
+import megascan
 
 
 def init():

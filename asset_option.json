@@ -75,5 +75,33 @@
       "compression_settings": "unreal.TextureCompressionSettings.TC_BC7",
       "srgb": false
     }
+  },
+  "Standard":
+  {
+    "StaticMesh":
+    {
+      "prefix": "SM",
+      "folder": "Model"
+    },
+    "Material":
+    {
+      "prefix": "M",
+      "folder": "Material"
+    },
+    "MaterialInstanceConstant":
+    {
+      "prefix": "MI",
+      "folder": "Material"
+    },
+    "FoliageType_InstancedStaticMesh":
+    {
+      "prefix": "FT",
+      "folder": "Foliage"
+    },
+    "Texture2D":
+    {
+      "prefix": "T",
+      "folder": "Texture"
+    }
   }
 }

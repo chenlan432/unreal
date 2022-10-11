@@ -30,6 +30,19 @@ MENUS = {
                         }
                     )
                 },
+                {
+                    'name': 'Megascans',
+                    'section': 'megascan',
+                    'type': 'menu',
+                    'sub': (
+                        {
+                            'name': 'Init Assets',
+                            'section': 'init',
+                            'type': 'entry',
+                            'func': 'megascan.rename_assets()'
+                        },
+                    )
+                }
             )
         },
     )

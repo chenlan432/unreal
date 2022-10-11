@@ -50,5 +50,31 @@ def get_texture_type(texture):
     return texture.get_name().rpartition('_')[-1]
 
 
+def get_asset_type_name(asset):
+    return asset.get_full_name().split(' ')[0]
+
+
+def set_metadata(asset, data_name, data_value):
+    unreal.EditorAssetLibrary.set_metadata_tag(asset, data_name, data_value)
+
+
+def get_metadata(asset, data_name):
+    return unreal.EditorAssetLibrary.get_metadata_tag(asset, data_name)
+
+
+def rename_dir(source_path, new_path):
+    unreal.EditorAssetLibrary.rename_directory(source_path, new_path)
+
+
+def move_asset(asset, new_path, new_name=''):
+    old_path_name = asset.get_path_name()
+    new_name = new_name or asset.get_name()
+    unreal.EditorAssetLibrary.rename_asset(old_path_name, '{}/{}.{}'.format(new_path, new_name, new_name))
+
+
+def delete_dir(dir_path):
+    unreal.EditorAssetLibrary.delete_directory(dir_path)
+
+
 if __name__ == '__main__':
     print('aaaa')
