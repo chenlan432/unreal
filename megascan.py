@@ -22,7 +22,7 @@ def rename_assets():
                 match_var = re.search(r'_(Var\d+)_', old_asset_name)
                 match_bill = re.search(r'illboard_', old_asset_name)
 
-                asset_name_list = [standard_setup[asset_type]['prefix'], asset_base_name]
+                asset_name_list = [standard_setup[asset_type]['prefix'], 'Mega', asset_base_name]
                 if match_var:
                     asset_name_list.append(match_var.group(1))
                 if match_bill:
