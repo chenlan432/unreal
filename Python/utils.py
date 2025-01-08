@@ -3,11 +3,13 @@ import os
 import json
 
 
+# 获取项目信息
 def get_project_name():
     return unreal.Paths.project_dir().split('/')[-2]
 
 
-def get_assets():
+# 资产相关操作
+def get_selected_assets():
     return unreal.EditorUtilityLibrary().get_selected_assets()
 
 
