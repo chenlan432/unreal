@@ -10,7 +10,7 @@ def get_project_name():
 
 # 资产相关操作
 def get_selected_assets():
-    return unreal.EditorUtilityLibrary().get_selected_assets()
+    return unreal.EditorUtilityLibrary.get_selected_assets()
 
 
 def get_all_assets(dir_path='/Game'):
