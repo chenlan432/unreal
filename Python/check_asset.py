@@ -67,7 +67,7 @@ def check_texture(asset, error_textures, settings):
 def change_texture_property(texture, props, setting):
     for prop in props:
         prop_value = setting[prop]
-        utils.set_property(texture, prop, prop_value)
+        texture.set_editor_property(prop, prop_value)
 
 
 def change_texture(error_textures, settings):
@@ -104,7 +104,7 @@ def check_static_meshes(static_mesh, error_static_meshes, settings):
 def change_static_mesh_import_data(static_mesh, import_data, props, setting):
     for prop_name in props:
         prop_value = setting[prop_name]
-        utils.set_property(import_data, prop_name, prop_value)
+        import_data.set_editor_property(prop_name, prop_value)
         static_mesh.set_editor_property('asset_import_data', import_data)
 
 
