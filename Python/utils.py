@@ -159,6 +159,18 @@ def get_viewport_camera_matrix():
     return camera_transform
 
 
+def get_pilot_actor(viewport_config_key='None'):
+    return unreal.LevelEditorSubsystem.get_pilot_level_actor(viewport_config_key)
+
+
+def eject_pilot_actor(viewport_config_key='None'):
+    unreal.LevelEditorSubsystem.eject_pilot_level_actor(viewport_config_key)
+
+
+def pilot_actor(actor_to_pilot, viewport_config_key='None'):
+    unreal.LevelEditorSubsystem.pilot_level_actor(actor_to_pilot, viewport_config_key)
+
+
 # 其他
 def load_json(json_name):
     json_path = '{}/{}.json'.format(os.path.dirname(__file__), json_name)
